@@ -86,14 +86,14 @@ pattern_to="$3"
 case $action in
   "find")
     # echo $pattern_from $pattern_to
-    # grep -Erl --include="*.js" --include="*.php" "$pattern_from" . | xargs sed "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_from"
-    grep -Er --include="*.js" --include="*.php" "$pattern_from" .
+    # grep -Erl --include="*.html" --include="*.htm" --include="*.js" --include="*.php" "$pattern_from" . | xargs sed "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_from"
+    grep -Er --include="*.html" --include="*.htm" --include="*.js" --include="*.php" "$pattern_from" .
     ;;
   "preview")
-    grep -Erl --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -r "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
+    grep -Erl --include="*.html" --include="*.htm" --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -r "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
     ;;
   "write")
-    # grep -Erl --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -i "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
-    grep -Erl --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -i "" -E "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
+    # grep -Erl --include="*.html" --include="*.htm" --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -i "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
+    grep -Erl --include="*.html" --include="*.htm" --include="*.js" --include="*.php" "$pattern_from" . | xargs sed -i "" -E "s%$pattern_from%$pattern_to%g" | grep -E "$pattern_to"
     ;;
 esac
