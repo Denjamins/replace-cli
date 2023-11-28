@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Function to display help
 display_help() {
